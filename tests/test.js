@@ -1,3 +1,5 @@
 const { exec } = require('../src/native-exec');
 
-console.log(exec('ls -la'));
+exec('ls -la', (output) => {
+    console.log(output);
+});

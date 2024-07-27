@@ -1,9 +1,9 @@
 const exec = require('bindings')('exec.node');
 
-const exec = (cmd) => {
-    return exec.exec(cmd);
+const execWrapper = (cmd, cb = () => {}) => {
+    return exec.exec(cmd, cb);
 };
 
 module.exports = {
-    exec: exec
+    exec: execWrapper
 };

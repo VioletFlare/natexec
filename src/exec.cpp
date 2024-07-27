@@ -33,8 +33,9 @@ public:
             dup2(pipefd[1], STDERR_FILENO);
             close(pipefd[1]);
 
+            
             // Execute the command in the shell
-            execlp("/bin/sh", "/bin/sh", "-c", command_.c_str(), nullptr);
+            execl("/bin/sh", "/bin/sh", "-c", command_.c_str(), nullptr);
 
             // If execlp fails
             _exit(EXIT_FAILURE);

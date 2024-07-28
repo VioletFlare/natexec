@@ -1,4 +1,4 @@
-const { exec } = require('../src/native-exec');
+const { exec } = require('../src/natexec');
 
 exec('ls -la', (output) => {
     console.log(output);

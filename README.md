@@ -16,7 +16,7 @@ ln -s /dev/stdout pico2wave.wav
 ```
 
 ```
-const { exec } = require('native-exec');
+const { exec } = require('natexec');
 
 exec('pico2wave -w ./tests/pico2wave.wav test!', (output) => {
     console.log(output)

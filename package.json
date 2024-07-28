@@ -1,8 +1,8 @@
 {
   "name": "natexec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "To debug the code in vscodium or vscode, install",
-  "main": "natexec.js",
+  "main": "src/natexec.js",
   "scripts": {
     "dev": "node-gyp build --debug",
     "build": "npm i",

@@ -9,14 +9,14 @@ The documentation says:
 
 The intention behind executing the shell command at a lower level is to bypass the Node.JS limitation of not being able to interact with /dev/stdout.
 
-# Usage
+# Usage Example
 
 ```
 ln -s /dev/stdout pico2wave.wav
 ```
 
 ```
-const { exec } = require('../src/native-exec');
+const { exec } = require('native-exec');
 
 exec('pico2wave -w ./tests/pico2wave.wav test!', (output) => {
     console.log(output)

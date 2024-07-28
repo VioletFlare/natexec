@@ -35,7 +35,7 @@ public:
 
             
             // Execute the command in the shell
-            execl("/bin/sh", "/bin/sh", "-c", command_.c_str(), nullptr);
+            execlp("/bin/sh", "/bin/sh", "-c", command_.c_str(), nullptr);
 
             // If execlp fails
             _exit(EXIT_FAILURE);
@@ -56,7 +56,7 @@ public:
     }
 
     void OnOK() override {
-        Callback().Call({Env().Undefined(), Buffer<char>::Copy(Env(), outputData_.data(), outputData_.size())});
+        Callback().Call({Buffer<char>::Copy(Env(), outputData_.data(), outputData_.size())});
     }
 
 private:
